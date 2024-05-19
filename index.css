@@ -1,0 +1,562 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    
+    color: white;
+    font-family: "Fira Sans", sans-serif;
+    background-color: grey;
+    background-image:radial-gradient(circle,grey,rgb(255, 255, 255));
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: #000000;
+    background-image:radial-gradient(#696e6aef,#000000);
+
+
+}
+
+nav .heading {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+nav ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: rgb(18, 9, 141);
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav .sideMenuButton {
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    display: none;
+}
+
+/* responsive navbar css */
+@media screen and (max-width: 600px) {
+    nav .sideMenuButton {
+        display: flex;
+    }
+
+    nav .navbar {
+        display: none;
+    }
+
+    .sideNavigationBar {
+        display: block !important;
+    }
+}
+
+.sideNavigationBar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    background-color: green;
+    overflow-x: hidden;
+    transition: 0.3s ease-in;
+    padding-top: 60px;
+    display: none;
+}
+
+.sideNavigationBar a {
+    padding: 8px 8px 8px 40px;
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.sideNavigationBar a button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color:  black;
+    font-size: 16px;
+    border-style: none;
+    font-weight: 700;
+}
+
+.sideNavigationBar a:hover {
+    color: white;
+}
+
+.sideNavigationBar .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5%;
+}
+
+.line .side1 {
+    padding-right: 50px;
+}
+
+.side1 h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    animation-name: ad;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    color:rgb(206, 27, 27);
+}
+@keyframes ad {
+    0%{color: red;
+    }
+    50%{color: green;
+    }
+    100%{color: blue;}
+}
+
+.side1 button {
+    width: 200px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    background-color:red;
+}
+
+a {
+    text-decoration: none;
+    color:white
+
+}
+
+/* Header content responsive */
+@media screen and (max-width: 9800px) {
+    .side2 img {
+        width: 350px;
+        border-radius:35% ;
+        border-color: #08047e;
+        box-shadow: 0 40px 80px 0 rgb(0, 0, 0), 0 60px 200px 0 rgb(0, 0, 0);
+        animation-name: opac;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+    }
+    @keyframes opac {
+        0%{opacity: 1;}
+        10%{opacity:0.9;}
+        20%{opacity: 0.8;}
+        30%{opacity:0.7;} 
+        40%{opacity: 0.65;}
+        50%{opacity:0.60;} 
+        60%{opacity: 0.55;}
+        70%{opacity:0.50;} 
+        80%{opacity: 0.45;}
+        90%{opacity:0.4;}
+        100%{opacity:1;}
+        
+    }
+
+    .side1 h1 {
+        font-size: 40px;
+    }
+
+    .side1 p {
+        font-size: 17px;
+    }
+
+    .line {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .side1 h1 {
+        font-size: 35px;
+    }
+
+    .line {
+        flex-direction: column;
+    }
+
+    .line .side1 {
+        padding: 30px;
+    }
+}
+
+/* section */
+
+section .topic a {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about .boxes .box {
+    margin: 10px 20px;
+    max-width: calc(100% / 3 - 50px);
+    text-align: center;
+    border-radius:15px;
+    padding: 30px 20px;
+    cursor: default;
+    animation-name:grad;
+    animation-duration:10s;
+    color:rgb(144, 10, 10);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+
+}
+@keyframes grad {
+    0% {background-color:rgb(59, 246, 93);}
+    25%{background-color:rgba(0, 0, 255, 0.719);}
+ 50%{background-color:rgba(224, 105, 8, 0.874);}
+ 75%{background-color:rgba(25, 0, 255, 0.432);}
+     100%{background-color:rgb(59, 246, 93);}
+         0%{box-shadow: 10px 10px 10px;}
+         50%{box-shadow: 20px 20px 20px;}
+        100% {box-shadow: 10px 10px 10px;}
+    }
+   
+
+    
+
+
+
+ .about.box.info3 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted rgb(14, 27, 207);
+  }
+  
+  .info3 .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    height:60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size:small;
+    font-style: italic;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    margin-left: 0px;
+  }
+  
+  .info3:hover .tooltiptext {
+    visibility: visible;
+  }
+ 
+  .about.box.info1{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .info1 .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    height:60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size:small;
+    font-style: italic;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    margin-left: 0px;
+  }
+  
+  .info1:hover .tooltiptext {
+    visibility: visible;
+  }
+  .about.box.info2{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .info2 .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    height:60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size:small;
+    font-style: italic;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    margin-left: 0px;
+  }
+  
+  .info2:hover .tooltiptext {
+    visibility: visible;
+  }
+ 
+
+/* Contact Page  */
+
+.contact {
+    padding: 20px;
+    color:rgb(255, 255, 255);
+    background-image: url("https://wallpapers.com/images/hd/pure-black-background-2yjg4rr7eaiuc465.jpg");
+
+
+}
+
+
+    
+
+.contact .content {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.content .title {
+    width: 80%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.title {
+    margin-bottom: 30px;
+    margin-left: 80px;
+}
+
+.contactMenu {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input2 {
+    margin-top: 10;
+}
+
+.label1 {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: bolder;
+}
+
+.contactMenu .input1 input {
+    border-radius: 13px;
+    padding: 6px;
+}
+
+.input2 input {
+    border-color: black;
+    width: 400px;
+}
+
+.button {
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+.button button {
+    width: 162px;
+    height: 35px;
+    border-radius: 12px;
+    border-color: transparent;
+    color: black;
+}
+
+.button button:hover {
+    background-color: black;
+    color:white;
+    box-shadow: 100px 12222px 16446px 0 rgba(215, 209, 209, 0.24),0 17px 50px 0 rgba(255, 207, 207, 0.19);
+}
+
+button {
+    width: 162px;
+    height: 35px;
+    border-radius: 12px;
+    border-color: transparent;
+    color:black;
+}
+
+button:hover {
+    background-color:black;
+    color:white;
+    box-shadow: 10px 122px 166px 1000px rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.rightside1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+}
+
+.title1 {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.content1 {
+    width: 450px;
+    margin-top: 2px;
+    color: rgb(255, 255, 255);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    padding: 15px 0;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    background-color: #8cc099;
+    background-image: url("https://wallpapers.com/images/hd/pure-black-background-2yjg4rr7eaiuc465.jpg");
+}
+
+footer .footer span {
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+
+footer .footer span a {
+    font-weight: 500;
+    color: brown;
+}
+
+footer .footer span a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1060px) {
+    .contactMenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rightside1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .content1 {
+        width: 100%;
+        margin-top: 2px;
+        color: rgb(167, 71, 71);
+    }
+
+    .side2 img {
+        width: 95%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .side2 img {
+        width: 100%;
+    }
+
+    section .topic a {
+        font-size: 20px;
+    }
+
+    section .topic p {
+        font-size: 5px;
+    }
+
+    .about .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .boxes .box {
+        max-width: 70%;
+    }
+}
+.center{
+    text-align:center;
+}
+
+.pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: rgb(255, 255, 255);
+    float: left;
+    padding: 4px 8px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+    background-color: black;
+  }
+  
+  .pagination a.active {
+    background-color: #08047e;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #1507aa;}
