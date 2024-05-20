@@ -560,3 +560,49 @@ footer .footer span a:hover {
   }
   
   .pagination a:hover:not(.active) {background-color: #1507aa;}
+  /* Add these styles to index.css */
+
+/* Tooltip container */
+.navbar ul li a {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip text */
+.navbar ul li a .tooltip {
+    visibility: hidden;
+    width: 220px;
+    height:310px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size:small;
+    font-style: italic;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    margin-left: 0px;
+}
+
+/* Tooltip arrow */
+.navbar ul li a .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when hovering */
+.navbar ul li a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
