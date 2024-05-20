@@ -1,4 +1,4 @@
-# OCTANET-MAY
+# OCTANET-MAY task-01
 This task contains creating a landing page of my own quiz website with the help of HTML,CSS and Javascript.
 ### Enhanced Theory of the Web Page
 
