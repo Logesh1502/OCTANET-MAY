@@ -1,0 +1,140 @@
+
+
+body {
+    font-family: Arial, sans-serif; width: auto;
+height: auto;
+background-repeat:no-repeat;
+background-size: 100% 100%;
+background-color:rgb(187, 230, 237);
+}
+   
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #a20d0d;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 14px;
+    box-shadow: 10px 20px 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.deleteBtn {
+    background-color: #f44336;
+}
+/* Styles from previous example remain the same */
+
+.input-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-container input {
+    flex: 1;
+    margin-right: 5px;
+}
+/* Styles from previous examples remain the same */
+
+li {
+    margin-bottom: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    justify-items: auto;
+}
+
+li.fade-in {
+    opacity: 1;
+}
+
+.deleteBtn {
+    background-color: #f44336;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out;
+}
+
+li:hover .deleteBtn {
+    opacity: 1;
+}
+/* Styles from previous examples remain the same */
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    box-shadow:100px ;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-container input {
+    flex: 1;
+    margin-right: 5px;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 115px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+.deleteBtn {
+    background-color: #f44336;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: white;
+    border: none;
+    border-radius:50px;
+    box-shadow: 20px;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.deleteBtn:hover {
+    background-color: #d32f2f;
+}
+
